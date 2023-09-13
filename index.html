@@ -24,17 +24,24 @@
 
 <body>
   <section class="content">
-    <h1>Pokedex</h1>
+    <div class="header">
+      <h1>Pokedex</h1>
+
+      <div class="searchBox">
+        <input id="typeSearchInput" type="text" placeholder="pokemon type">
+        <button id="typeSearchButton" title="pesquisar" disabled>🔍</button>
+        <button id="clearSearchButton" title="limpar">✖️</button>
+        <button id="loadMoreButton" title="ler mais" type="button">Load More</button>
+      </div>
+    </div>
+
+    <div id="errorBox" class="errorBox" hidden>
+      <span>não encontramos pokemons com o tipo pesquisado</span>
+    </div>
 
     <ol id="pokemonList" class="pokemons">
       <!-- ..... Pokemons here ..... -->
     </ol>
-
-    <div class="pagination">
-      <button id="loadMoreButton" type="button">
-        Load More
-      </button>
-    </div>
   </section>
 
   <!-- Nosso JS -->
